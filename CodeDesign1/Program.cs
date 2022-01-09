@@ -15,8 +15,8 @@ namespace CodeDesign1
 
             //DecoratorClass.Run();
             //RepositoryClass.Run();
-            //ObserverClass.Run();
-            StrategyClass.Run();
+            ObserverClass.Run();
+            //StrategyClass.Run();
 
 
         }

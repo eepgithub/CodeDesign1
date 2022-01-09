@@ -8,9 +8,7 @@ namespace Design_Patterns_1.Observer.SubjectFiles
     public interface IMailBox : ISubject
     {
         public void CreateTimer();
-
         public void HandleTimerElapsed(object sender, ElapsedEventArgs e);
-
 
     }
 }

@@ -13,7 +13,7 @@ namespace CodeDesign1.Repository
 
             Console.WriteLine("Repository");
 
-            // Draw Menu
+            
             Console.WriteLine("Welcome To DB");
             Console.WriteLine("---------------------");
             Console.WriteLine(" Select ");
@@ -27,13 +27,13 @@ namespace CodeDesign1.Repository
             Console.WriteLine("X: Exit Program");
 
 
-            //Main Game Loop
+            
             while (true)
             {
-                // Get User Input
+               
                 char userInput = Console.ReadKey(true).KeyChar;
 
-                var dataRepository = new SimulatedDatabase();
+                var dataRepository = new DataRepository();
                 string data = dataRepository.Load("Dataset A");
                 string customer = "";
                 string animal = "";

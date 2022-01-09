@@ -15,11 +15,11 @@ namespace Design_Patterns_1.Observer.SubjectFiles
             Observers = new List<IObserver>();
         }
 
-        public void notifyObservers()
+        public void notifyObservers(string message)
         {
             foreach (var observer in Observers)
             {
-                observer.Update();
+                observer.Update(message);
             }
         }
 
@@ -35,7 +35,7 @@ namespace Design_Patterns_1.Observer.SubjectFiles
 
         public void CreateTimer()
         {
-            var timer = new System.Timers.Timer(3000); // fire every 3 second
+            var timer = new Timer(3000); // fire every 3 second
             timer.Elapsed += HandleTimerElapsed;
 
             // Have the timer fire repeated events (true is the default)
@@ -47,13 +47,14 @@ namespace Design_Patterns_1.Observer.SubjectFiles
             Console.WriteLine("Press the Enter key to exit the program at any time... ");
             Console.ReadLine();
 
-            notifyObservers();
+
 
         }
 
         public void HandleTimerElapsed(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("You have a new mail", e.SignalTime);
+            string message = "You have a new mail";
+            notifyObservers(message);
         }
     }
 }

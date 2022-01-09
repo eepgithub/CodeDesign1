@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodeDesign1.Repository
 {
-    public class SimulatedDatabase : IDataRepository
+    public class SimulatedDatabase
     {
         public string Load(string v)
         {

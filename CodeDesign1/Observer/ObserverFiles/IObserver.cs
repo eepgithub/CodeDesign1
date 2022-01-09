@@ -6,7 +6,7 @@ namespace Design_Patterns_1.Observer.ObserverFiles
 {
     public interface IObserver
     {
-        public void Update();
+        public void Update(string message);
 
     }
 }
